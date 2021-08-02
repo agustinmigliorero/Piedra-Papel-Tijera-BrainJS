@@ -54,30 +54,6 @@ const ejecutarMovimientoMaquina = (jPiedra, jPapel, jTijera) => {
         mMaquina = 1 <= predecirJugador && predecirJugador <= 3 ? (predecirJugador % 3) + 1 : 1
         console.log(`RONDA: ${cantidadDeRondas + 1} AI Predice que el jugador va a usar: ${predecirJugador} entonces AI usa: ${mMaquina} (1 = Piedra, 2 = Papel, 3 = Tijera, Cualquier otro valor sera un movimiento al azar.)`)
 
-        // if (predecirJugador === 1) {
-        //     mMaquina = 2;
-        //     movimientoMaquina.innerText = "Papel";
-        // } else if (predecirJugador === 2) {
-        //     mMaquina = 3;
-        //     movimientoMaquina.innerText = "Tijera";
-        // }
-        // else if (predecirJugador === 3) {
-        //     mMaquina = 1;
-        //     movimientoMaquina.innerText = "Piedra";
-        // }
-        // else {
-        //     movimientoRandom = Math.floor(Math.random() * 3 + 1);
-        //     mMaquina = movimientoRandom;
-        //     if (mMaquina === 1) {
-        //         movimientoMaquina.innerText = "Piedra";
-        //     } else if (mMaquina === 2) {
-        //         movimientoMaquina.innerText = "Papel";
-        //     }
-        //     else if (mMaquina === 3) {
-        //         movimientoMaquina.innerText = "Tijera";
-        //     }
-        // }
-
         if (mMaquina === 1) {
             movimientoMaquina.innerText = "Piedra";
         } else if (mMaquina === 2) {
@@ -100,7 +76,6 @@ const ejecutarMovimientoMaquina = (jPiedra, jPapel, jTijera) => {
         }
 
     }
-
 
 const verificarGanador = (movJugador, movMaquina) => {
     if (movJugador === movMaquina) {
