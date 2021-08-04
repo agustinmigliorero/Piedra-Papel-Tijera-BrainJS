@@ -3,10 +3,12 @@ body {
 }
 
 .container-game {
-    margin-top: 5%;
+    margin-top: 7.5%;
     padding-top: 5%;
     padding-bottom: 5%;
-    background-color: #ededed;
+    width: 70%;
+    height: 70%;
+    background-color: #ececec;
 }
 
 #puntaje-jugador {
@@ -21,6 +23,9 @@ body {
     .container-game {
         /* width: 100vh; */
         height: 100vh;
+        width: 100%;
+        margin-top: 0%;
+        padding-top: 30%;
     }
 
     .button.is-primary {
