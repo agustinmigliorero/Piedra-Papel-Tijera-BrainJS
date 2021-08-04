@@ -1,3 +1,18 @@
 body {
     font-family: 'Roboto', sans-serif;
 }
+
+.container {
+    margin-top: 5%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    background-color: #ededed;
+}
+
+#puntaje-jugador {
+    margin-right: 100px;
+}
+
+.button.is-primary {
+    margin-left: 30px;
+}
