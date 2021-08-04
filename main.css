@@ -2,7 +2,7 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-.container {
+.container-game {
     margin-top: 5%;
     padding-top: 5%;
     padding-bottom: 5%;
@@ -15,4 +15,23 @@ body {
 
 .button.is-primary {
     margin-left: 30px;
+}
+
+@media screen and (max-width: 650px) {
+    .container-game {
+        /* width: 100vh; */
+        height: 100vh;
+    }
+
+    .button.is-primary {
+        margin-left: 3.5%;
+    }
+
+    #puntaje-jugador {
+        margin-right: 0%;
+    }
+    
+    .puntaje-jugador-uno {
+        display: block;
+    }
 }
