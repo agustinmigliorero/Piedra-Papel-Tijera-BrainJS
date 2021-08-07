@@ -26,8 +26,6 @@ const ejecutarMovimientoMaquina = (jPiedra, jPapel, jTijera) => {
     jPiedra = 0;
     jPapel = 0;
     jTijera = 0;
-
-    let predecirJugador;
     
     if (ultimosMovimientos.length === 0) {
         let movimientoRandom = Math.floor(Math.random() * 3 + 1);
@@ -50,7 +48,7 @@ const ejecutarMovimientoMaquina = (jPiedra, jPapel, jTijera) => {
         
         const redNeuronal = new brain.recurrent.LSTMTimeStep();
         redNeuronal.train([ultimosMovimientos], {iterations: 100});
-        predecirJugador = Math.round(redNeuronal.run(ultimosMovimientos));
+        const predecirJugador = Math.round(redNeuronal.run(ultimosMovimientos));
         mMaquina = 1 <= predecirJugador && predecirJugador <= 3 ? (predecirJugador % 3) + 1 : 1
         console.log(`RONDA: ${cantidadDeRondas + 1} AI Predice que el jugador va a usar: ${predecirJugador} entonces AI usa: ${mMaquina} (1 = Piedra, 2 = Papel, 3 = Tijera, Cualquier otro valor sera un movimiento al azar.)`)
 
@@ -62,19 +60,6 @@ const ejecutarMovimientoMaquina = (jPiedra, jPapel, jTijera) => {
         else if (mMaquina === 3) {
             movimientoMaquina.innerText = "Tijera";
         }
-        else {
-            movimientoRandom = Math.floor(Math.random() * 3 + 1);
-            mMaquina = movimientoRandom;
-            if (mMaquina === 1) {
-                movimientoMaquina.innerText = "Piedra";
-            } else if (mMaquina === 2) {
-                movimientoMaquina.innerText = "Papel";
-            }
-            else if (mMaquina === 3) {
-                movimientoMaquina.innerText = "Tijera";
-            }
-        }
-
     }
 
 const verificarGanador = (movJugador, movMaquina) => {
